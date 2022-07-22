@@ -280,25 +280,25 @@
 #     return r
 # print(reverse(1534236469))
 
-from audioop import reverse
+# from audioop import reverse
 
 
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        s = ''.join(sorted(s))
-        t = ''.join(sorted(t))
-        if s == t:
-            return True
-        return False
-import re
+# class Solution:
+#     def isAnagram(self, s: str, t: str) -> bool:
+#         s = ''.join(sorted(s))
+#         t = ''.join(sorted(t))
+#         if s == t:
+#             return True
+#         return False
+# import re
 
-c = "p0"
-c = (''.join(re.findall(r'[A-Za-z0-9]', c))).lower()
-print(c)
-b = ''
-for i in range(len(c)-1,-1,-1):
-    b = b + (c[i]) 
-print(b)
+# c = "p0"
+# c = (''.join(re.findall(r'[A-Za-z0-9]', c))).lower()
+# print(c)
+# b = ''
+# for i in range(len(c)-1,-1,-1):
+#     b = b + (c[i]) 
+# print(b)
 
 
 

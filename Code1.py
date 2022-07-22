@@ -280,7 +280,13 @@
 #     return r
 # print(reverse(1534236469))
 
- 
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        s = ''.join(sorted(s))
+        t = ''.join(sorted(t))
+        if s == t:
+            return True
+        return False
 
 
 

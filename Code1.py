@@ -300,7 +300,67 @@
 #     b = b + (c[i]) 
 # print(b)
 
+#s = "              -+33334434words and 00987      s "
 
+s = "+9999990"
+#s = "+-12"
+s = s.lstrip() # 去掉两边的空格
+b = ''
+tem = False
+
+if len(s) > 1:
+    if (s[0].isdigit()) or (s[0] == '+' and s[1].isdigit()) or (s[0] == '-' and s[1].isdigit()):
+
+        if s[0] == '-':
+            tem = True
+            for i in range(1,len(s)):
+                if s[i].isdigit():
+                    b = b + s[i]
+                else:
+                    break
+
+        if s[0].isdigit():
+            for i in range(0,len(s)):
+                if s[i].isdigit():
+                    b = b + s[i]
+                else:
+                    break
+
+        
+        if s[0] == '+':
+            for i in range(1,len(s)):
+                if s[i].isdigit():
+                    b = b + s[i]
+                else:
+                    break
+        if tem is True:
+            print(max( -2 ** 31, 0 - int(b)))
+        else:
+            print(min(int(b), 2 ** 31 - 1))
+
+    else:
+        print(0)
+elif len(s) == 1:
+    if s[0].isdigit():
+        print(s[0])
+    else:
+        print(0)
+else:
+    print(0)
+
+# for i in s:
+#     if i != ' ' and (i <='9' and i >= '1'):
+#         b = b + i
+#     if i == '-':
+#         tem = True
+# if tem is True:
+#     print(0 - int(b))
+# else:
+#     print (int(b))
+    
+
+
+        
 
 
 
